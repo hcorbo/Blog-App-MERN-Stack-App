@@ -6,6 +6,7 @@ import Register from './pages/register/Register';
 import Settings from './pages/settings/Settings';
 import Single from './pages/single/Single';
 import Write from './pages/write/Write';
+import Contact from './pages/contact/Contact';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from './context/Context';
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/posts">
           <Home />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Route path="/register">
           {user ? <Home /> : <Register />}

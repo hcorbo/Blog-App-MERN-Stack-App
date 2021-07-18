@@ -4,7 +4,6 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { FaRegUserCircle } from "react-icons/fa";
 import { Context } from "../../context/Context";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export default function Settings() {
   const { user, dispatch } = useContext(Context);

@@ -1,0 +1,42 @@
+.commentDescInput {
+    color: #666;
+    font-size: 18px;
+    line-height: 25px;
+    border: 1px solid lightgray;
+    width: 100%;
+  }
+
+  .commentInputWrapper{
+      border: none;
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-top: 50px;
+      width: 70%;
+  }
+
+  .commentImage{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.commentInputContainer{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.commentButtonPost {
+    width: 100px;
+    border: none;
+    background-color: teal;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 20px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+  }

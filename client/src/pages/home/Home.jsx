@@ -10,7 +10,7 @@ import { Context } from "../../context/Context";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
-  const {user} = useContext(Context)
+  const {user} = useContext(Context);
 
   useEffect(() => {
     const fetchPosts = async () => {

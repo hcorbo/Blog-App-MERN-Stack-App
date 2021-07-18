@@ -1,0 +1,39 @@
+.commentWrapper {
+    margin: 20px;
+    margin-left: 50px;
+    padding: 15px;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #666;
+    border-radius: 10px;
+  }
+
+  .commentInfo {
+    margin-bottom: 20px;
+    display: flex;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  }
+  
+  .commentInfoOne{
+    margin-left: 10px;
+  }
+
+  .commentAuthor{
+    margin-left: 5px;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+
+  .commentDate{
+    font-size: 12px;
+  }
+  
+  .commentDesc {
+    color: #666;
+    font-size: 16px;
+    line-height: 25px;
+    margin-left:60px;
+  }
+  

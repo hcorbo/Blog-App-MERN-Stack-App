@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.css";
@@ -8,6 +8,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,6 +21,7 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
+      setError(true);
     }
   };
 
@@ -50,6 +52,7 @@ export default function Login() {
           Register
         </Link>
       </button>
+      {error && <span>Something went wrong!</span>}
     </div>
   );
 }

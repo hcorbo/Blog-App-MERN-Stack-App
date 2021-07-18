@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./sidebar.css";
 import {
   FaFacebookSquare,
@@ -7,9 +7,12 @@ import {
 } from "react-icons/fa";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
 
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
+  const { user } = useContext(Context);
+  const PF = "http://localhost:5000/images/";
 
   useEffect(() => {
     const getCategories = async () => {
@@ -23,12 +26,11 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
-        <img
-          className="sidebarImg"
-          src="https://i.pinimg.com/originals/da/66/ab/da66ab7daf962a1962a9695e423b25e1.jpg"
-          alt=""
-        />
-        <p>Ovo je neki tekst za probu</p>
+        <img className="sidebarImg" src={PF + user.profilePicture} alt="" />
+        <p>
+          I'm a Turkish programmer.
+          If you are interested, you can view some of my blogs.
+        </p>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>

@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaRegEdit, FaTrashAlt } from "react-icons/fa";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import Comments from "../comment/Comments";
 
 export default function SinglePost() {
   const location = useLocation();
@@ -110,11 +111,17 @@ export default function SinglePost() {
           <p className="singlePostDesc">{post.description}</p>
         )}
         {updateMode && (
-          <button className="singlePostButton" onClick={handleUpdate}>
-            Update
-          </button>
+          <div className="singlePostButtons">
+            <button className="singlePostButtonCancel" onClick={()=>setUpdateMode(false)}>
+              Cancel
+            </button>
+            <button className="singlePostButtonUpdate" onClick={handleUpdate}>
+              Update
+            </button>
+          </div>
         )}
       </div>
+      <Comments post={post} path={path}/>
     </div>
   );
 }
